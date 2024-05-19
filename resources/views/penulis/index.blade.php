@@ -36,15 +36,15 @@
                                         <td class="text-center">
                                             {{ ++$index }}
                                         </td>
-                                        <td>{{ $rak->lokasi_rak }}</td>
+                                        <td>{{ $penulis->nama_penulis }}</td>
                                         <td class="text-center">
-                                            <form onsubmit="return confirm('Apakah Anda Yakin ?');" action="{{ route('penulis.destroy', $penulis->kd_penulis) }}" method="POST">
+                                            <!-- <form onsubmit="return confirm('Apakah Anda Yakin ?');" action="{{ route('penulis.destroy', $penulis->kd_penulis) }}" method="POST"> -->
                                                 <a href="{{ route('penulis.show', $penulis->kd_penulis) }}" class="btn btn-sm btn-dark">SHOW</a>
                                                 <a href="{{ route('penulis.edit', $penulis->kd_penulis) }}" class="btn btn-sm btn-primary">EDIT</a>
-                                                @csrf
+                                                <!-- @csrf
                                                 @method('DELETE')
                                                 <button type="submit" class="btn btn-sm btn-danger">HAPUS</button>
-                                            </form>
+                                            </form> -->
                                         </td>
                                     </tr>
                                 @empty

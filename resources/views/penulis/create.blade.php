@@ -18,15 +18,15 @@
                 </div>
                 <div class="card border-0 shadow-sm rounded">
                     <div class="card-body">
-                        <form action="{{ route('rak.store') }}" method="POST"   >
+                        <form action="{{ route('penulis.store') }}" method="POST"   >
                           @csrf
                             <div class="form-group">
                                 <label for="exampleInputEmail1">Penulis</label>
                                 <input type="text" name="nama_penulis" class="form-control" placeholder="Masukkan Nama Penulis">
-                                <input type="text" name="tempat_lahir" class="form-control" placeholder="Masukkan Nama Penulis">
-                                <input type="text" name="tgl_lahir" class="form-control" placeholder="Masukkan Nama Penulis">
-                                <input type="text" name="email" class="form-control" placeholder="Masukkan Nama Penulis">
-                                @error('lokasi_rak')
+                                <input type="text" name="tempat_lahir" class="form-control" placeholder="Tempat Tinggal Penulis">
+                                <input type="text" name="tgl_lahir" class="form-control" placeholder="Tanggal Lahir Penulis">
+                                <input type="text" name="email" class="form-control" placeholder="Email Penulis">
+                                @error('nama_penulis')
                                 <div class="alert alert-danger mt-2">
                                     {{ $message }}
                                 </div>

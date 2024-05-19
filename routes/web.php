@@ -18,3 +18,4 @@ Route::get('/', function () {
 });
 
 Route::resource('/rak',\App\Http\Controllers\RakController::class);
+Route::resource('/penulis',\App\Http\Controllers\PenulisController::class);

@@ -46,7 +46,7 @@ class PenulisController extends Controller
 
     public function show(int $kd_penulis): View
     {
-        $penulis = Rak::where('kd_penulis' ,$kd_rak)->first();
+        $penulis = Penulis::where('kd_penulis' ,$kd_penulis)->first();
 
         return view('penulis.show', compact('penulis'));
     }
