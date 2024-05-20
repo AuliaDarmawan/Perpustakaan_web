@@ -23,8 +23,11 @@
                             <div class="form-group">
                                 <label for="exampleInputEmail1">Penulis</label>
                                 <input type="text" name="nama_penulis" class="form-control" placeholder="Masukkan Nama Penulis">
+                                <label for="exampleInputEmail1">Tempat Lahir</label>
                                 <input type="text" name="tempat_lahir" class="form-control" placeholder="Tempat Tinggal Penulis">
-                                <input type="text" name="tgl_lahir" class="form-control" placeholder="Tanggal Lahir Penulis">
+                                <label for="exampleInputEmail1">Tanggal Lahir</label>
+                                <input type="text" name="tgl_lahir" class="form-control" placeholder="yyyy-mm-dd">
+                                <label for="exampleInputEmail1">Email</label>
                                 <input type="text" name="email" class="form-control" placeholder="Email Penulis">
                                 @error('nama_penulis')
                                 <div class="alert alert-danger mt-2">

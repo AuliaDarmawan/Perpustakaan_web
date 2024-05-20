@@ -38,20 +38,20 @@ class PenulisController extends Controller
         return redirect()->route('penulis.index')->with(['success' => 'Data Berhasil Disimpan!']);
     }
 
-    public function edit(int $kd_penulis): View
+    public function edit(int $kd_penuliss): View
     {
-        $dataPenulis = Penulis::where('kd_penulis' ,$kd_penulis)->first();
+        $dataPenulis = Penulis::where('kd_penuliss' ,$kd_penuliss)->first();
         return view('penulis.edit', compact('dataPenulis'));
     }
 
-    public function show(int $kd_penulis): View
+    public function show(int $kd_penuliss): View
     {
-        $penulis = Penulis::where('kd_penulis' ,$kd_penulis)->first();
+        $penulis = Penulis::where('kd_penuliss' ,$kd_penuliss)->first();
 
         return view('penulis.show', compact('penulis'));
     }
 
-    public function update(Request $request, $kd_penulis): RedirectResponse
+    public function update(Request $request, $kd_penuliss): RedirectResponse
     {
         //validate form
         $request->validate([
@@ -61,7 +61,7 @@ class PenulisController extends Controller
             'email'      => 'required|min:2'
         ]);
 
-        $dataPenulis = Penulis::where('kd_penulis' ,$kd_penulis)->first();
+        $dataPenulis = Penulis::where('kd_penuliss' ,$kd_penuliss)->first();
         $dataPenulis->update([
             'nama_penulis'        => $request->nama_penulis,
             'tempat_lahir'        => $request->tempat_lahir,
@@ -72,9 +72,9 @@ class PenulisController extends Controller
         return redirect()->route('penulis.index')->with(['success' => 'Data Berhasil Diubah!']);
     }
 
-    public function destroy($kd_penulis): RedirectResponse
+    public function destroy($kd_penuliss): RedirectResponse
     {
-        $penulis = Penulis::where('kd_penulis' ,$kd_penulis)->first(); 
+        $penulis = Penulis::where('kd_penuliss' ,$kd_penuliss)->first(); 
         $penulis->delete();
         return redirect()->route('penulis.index')->with(['success' => 'Data Berhasil Dihapus!']);
     }

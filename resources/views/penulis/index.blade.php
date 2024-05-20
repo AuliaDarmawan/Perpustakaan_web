@@ -37,14 +37,17 @@
                                             {{ ++$index }}
                                         </td>
                                         <td>{{ $penulis->nama_penulis }}</td>
+                                        <td>{{ $penulis->tempat_lahir}}</td>
+                                        <td>{{ $penulis->tgl_lahir }}</td>
+                                        <td>{{ $penulis->email }}</td>
                                         <td class="text-center">
-                                            <!-- <form onsubmit="return confirm('Apakah Anda Yakin ?');" action="{{ route('penulis.destroy', $penulis->kd_penulis) }}" method="POST"> -->
-                                                <a href="{{ route('penulis.show', $penulis->kd_penulis) }}" class="btn btn-sm btn-dark">SHOW</a>
-                                                <a href="{{ route('penulis.edit', $penulis->kd_penulis) }}" class="btn btn-sm btn-primary">EDIT</a>
-                                                <!-- @csrf
+                                            <form onsubmit="return confirm('Apakah Anda Yakin ?');" action="{{ route('penulis.destroy', $penulis->kd_penuliss) }}" method="POST">
+                                                <a href="{{ route('penulis.show', $penulis->kd_penuliss) }}" class="btn btn-sm btn-dark">SHOW</a>
+                                                <a href="{{ route('penulis.edit', $penulis->kd_penuliss) }}" class="btn btn-sm btn-primary">EDIT</a>
+                                                @csrf
                                                 @method('DELETE')
                                                 <button type="submit" class="btn btn-sm btn-danger">HAPUS</button>
-                                            </form> -->
+                                            </form>
                                         </td>
                                     </tr>
                                 @empty
